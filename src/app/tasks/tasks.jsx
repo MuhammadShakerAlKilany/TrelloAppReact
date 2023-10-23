@@ -17,7 +17,7 @@ export default function Tasks() {
   const router = useNavigate()
   if(!localStorage?.getItem("token")){
   
-    router("/login")
+    router("/login",{ replace: true })
   }
 
 

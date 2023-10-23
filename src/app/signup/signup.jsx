@@ -18,7 +18,7 @@ export default function Signup() {
       const res = await api.post("users/signUp", reqData);
       console.log(res.data);
       setLoading(false);
-      router.push("/login");
+      router("/login",{ replace: true });
     } catch (error) {
       setLoading(false);
       if(error.response?.data?.message == "email is unique"){

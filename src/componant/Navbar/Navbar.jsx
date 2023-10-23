@@ -4,11 +4,11 @@ import { tokenContext } from '../../context/tokenContext';
 // import "bootstrap/dist/js/bootstrap"
 
 import styles from './Navbar.module.css'
-import { Link ,redirect} from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 
 export default function Navbar() {
   let { token, setToken } = useContext(tokenContext);
-
+  const navigat = useNavigate()
 
   function logout() {
     if(typeof window !== "undefined"){
@@ -17,7 +17,7 @@ export default function Navbar() {
       localStorage?.removeItem("data");
     }
     setToken(null);
-    redirect("/login")
+    navigat("/login",{replace:true})
   }
 
   return (

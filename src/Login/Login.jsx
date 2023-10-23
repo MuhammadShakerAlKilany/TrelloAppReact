@@ -26,7 +26,7 @@ export default function Login() {
         localStorage?.setItem("data", JSON.stringify(res.data.data))
       
       setToken(res.data.token);
-      router("/user")
+      router("/user",{ replace: true })
       console.log("user")
 
     } catch (error) {
@@ -77,7 +77,7 @@ export default function Login() {
           localStorage?.setItem("data", JSON.stringify(res.data.data))
         }
         setToken(res.data.token);
-        router.push('/user');
+        router('/user',{ replace: true });
       } catch (error) {
         
         console.log(error);
