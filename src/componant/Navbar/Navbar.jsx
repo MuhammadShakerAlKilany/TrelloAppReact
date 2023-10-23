@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="container" id={styles.naver}>
         <Link className="navbar-brand" to="/">
           {" "}
-          <img src="/images/logo.png" alt="Trello" style={{ width: "100px" }} />
+          <img src="./favicon.ico" alt="Trello" style={{ width: "30px" }} />
         </Link>
         <button
           className="navbar-toggler"
